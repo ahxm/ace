@@ -164,13 +164,15 @@ public class Tools {
 
     public static boolean checkKey(String paraname, String FKEY){
         paraname = (null == paraname)? "":paraname;
-        return MD5.md5(paraname+DateUtil.getDays()+",fh,").equals(FKEY);
+        return MD5.md5(paraname+DateUtil.getDays()+",anzhen,").equals(FKEY);
     }
 
 
     public static void main(String[] args) {
         //  String num = readTxtFile("admin/config/PAGE.txt");
-        System.out.println(getTimes("2016-01-01 10:10:10","yyyy-MM-dd HH:mm:ss"));
+        //System.out.println(getTimes("2016-01-01 10:10:10","yyyy-MM-dd HH:mm:ss"));
+
+        System.out.println(checkKey("username","b024736f0374c3281ff159d6a4ae4d34"));
     }
 
 }
